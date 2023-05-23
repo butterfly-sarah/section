@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background: url(images/16398265_v755-toon-70.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 46, 161, 0.1);
+}
+li{
+    list-style: none;
+    display: inline-block;
+    font-size: 22px;
+    text-transform: capitalize;
+    color: white;
+    margin-right: 20px;
+    margin-top: 20px;
+    float: right;
+}
+li:hover{
+    cursor: pointer;
+    font-weight: 800;
+    color: aqua;
+}
+.nav{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(149, 85, 179, 0.3);
+    padding: 0 20px;
+}
+.major{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(149, 85, 179, 0.3);
+    border-radius: 30px;
+    width: 50%;
+    height: 50%;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: white;
+}
+button{
+    width: 100px;
+    height: 45px;
+    text-transform: capitalize;
+    border: 0;
+    background-color: white;
+    display: inline-block;
+    color: palevioletred;
+}
+button:hover{
+    cursor: pointer;
+    border: 2px solid palevioletred;
+}
+.btn{
+    background-color: palevioletred;
+    color: white;
+}
+.btn:hover{
+    border: 2px solid white;
+}
+span{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 70px;
+}
+.about{
+    height: 100vh;
+    padding-top: 100px;
+    background:url(images/SL-120722-54400-13.jpg);
+    background-size: cover;
+    text-align: center;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+.welcome{
+    text-align: center;
+}
+.line{
+    margin: auto;
+    width: 70px;
+    height: 5px;
+    background-color: rgb(255,255,255);
+}
+.rectangle{
+    padding: 50px;
+    display: inline-block;
+    width: 22%;
+    height: 60%;
+    border-radius: 20px;
+    border: 1px solid white;
+    text-align: center;
+    margin: 70px 20px;
+    line-height: 20px;
+}
+p{
+    margin: 25px 0px;
+}
+h3{
+    color: white;
+    text-transform: capitalize;
+}
+i{
+    margin: 50px 0px;
+    font-size: 30px;
+    color: rgb(86, 86, 86);
+}
+a{
+    display: block;
+    color: rgb(86, 86, 86);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover{
+    text-decoration: underline;
+}
