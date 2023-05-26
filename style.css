@@ -107,10 +107,10 @@ span{
 .rectangle{
     padding: 50px;
     display: inline-block;
-    width: 22%;
+    width: 20%;
     height: 60%;
     border-radius: 20px;
-    border: 1px solid white;
+    background-color: white;
     text-align: center;
     margin: 70px 20px;
     line-height: 20px;
@@ -119,13 +119,22 @@ p{
     margin: 25px 0px;
 }
 h3{
-    color: white;
+    color: rgb(0, 0, 0);
     text-transform: capitalize;
 }
 i{
     margin: 50px 0px;
     font-size: 30px;
-    color: rgb(86, 86, 86);
+    color: rgb(189, 134, 205);
+}
+.fa-gears{
+    color: rgb(247, 117, 245);
+}
+.fa-mobile-screen-button{
+    color: rgb(112, 245, 245);
+}
+.p{
+    color: gray;
 }
 a{
     display: block;
