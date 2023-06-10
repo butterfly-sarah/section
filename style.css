@@ -1,21 +1,31 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.home{
+
+.home {
     width: 100%;
     height: 100vh;
     background: url(images/16398265_v755-toon-70.jpg);
     background-position: center;
     background-size: cover;
 }
-.overlay{
+
+.overlay {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 46, 161, 0.1);
 }
-li{
+
+.nav li {
+    font-family: 'Poppins', sans-serif;
+    ;
     list-style: none;
     display: inline-block;
     font-size: 22px;
@@ -25,36 +35,42 @@ li{
     margin-top: 20px;
     float: right;
 }
-li:hover{
+
+.nav li:hover {
     cursor: pointer;
     font-weight: 800;
     color: aqua;
 }
-.nav{
+
+.nav {
     position: fixed;
     top: 0%;
     width: 100%;
     height: 70px;
-    background-color: rgba(149, 85, 179, 0.3);
+    background-color: rgba(149, 85, 179, 0.4);
     padding: 0 20px;
+    z-index: 30;
 }
-.major{
+
+.major {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(149, 85, 179, 0.3);
+    background-color: rgba(149, 85, 179, 0.4);
     border-radius: 30px;
     width: 50%;
     height: 50%;
 }
-h2{
+
+h2 {
     text-transform: uppercase;
     font-size: 50px;
     color: white;
 }
-button{
+
+button {
     width: 100px;
     height: 45px;
     text-transform: capitalize;
@@ -63,48 +79,64 @@ button{
     display: inline-block;
     color: palevioletred;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
     border: 2px solid palevioletred;
 }
-.btn{
+
+.btn {
     background-color: palevioletred;
     color: white;
 }
-.btn:hover{
+
+.btn:hover {
     border: 2px solid white;
 }
-span{
+
+.major span {
     display: inline-block;
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     line-height: 70px;
 }
-.about{
+
+.about,
+.feature,
+.offer,
+.why,
+.pricing,
+.section,
+.team {
     height: 100vh;
     padding-top: 100px;
-    background:url(images/SL-120722-54400-13.jpg);
+    background: url(images/SL-120722-54400-13.jpg);
     background-size: cover;
     text-align: center;
 }
-.logo{
+
+.logo {
     width: 70px;
     height: 70px;
     float: left;
 }
-.welcome{
+
+.welcome {
     text-align: center;
+    font-family: 'Cherry Bomb One', cursive;
 }
-.line{
+
+.line {
     margin: auto;
     width: 70px;
     height: 5px;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
 }
-.rectangle{
+
+.rectangle {
     padding: 50px;
     display: inline-block;
     width: 20%;
@@ -114,29 +146,71 @@ span{
     text-align: center;
     margin: 70px 20px;
     line-height: 20px;
+    box-shadow: 9px 9px 5px 3px rgba(0, 0, 0, 0.16);
+    position: relative;
+    z-index: 1;
 }
-p{
+
+.rectangle:hover i {
+    transition: 2s;
+    color: white;
+}
+
+.rectangle:hover .p {
+    transition: 2s;
+    color: rgb(239, 239, 239);
+}
+
+.rectangle::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    background-color: rgba(230, 135, 228, 0.7);
+    top: 0%;
+    left: 0%;
+    transition: 2s;
+}
+
+.rectangle:hover::after {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+p {
     margin: 25px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(98, 98, 98);
 }
-h3{
+
+h3 {
     color: rgb(0, 0, 0);
     text-transform: capitalize;
 }
-i{
+
+i {
     margin: 50px 0px;
     font-size: 30px;
     color: rgb(189, 134, 205);
 }
-.fa-gears{
+
+.fa-gears {
     color: rgb(247, 117, 245);
 }
-.fa-mobile-screen-button{
+
+.fa-mobile-screen-button {
     color: rgb(112, 245, 245);
 }
-.p{
+
+.p {
     color: gray;
 }
-a{
+
+a {
     display: block;
     color: rgb(86, 86, 86);
     text-decoration: none;
@@ -144,6 +218,578 @@ a{
     font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
+}
+
+.feature {
+    background-image: url(images/violet-watercolor-texture-background.jpg);
+    height: fit-content;
+}
+
+.feature h2 {
+    color: rgb(131, 120, 142);
+}
+
+.f-div {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+    word-spacing: 50px;
+}
+
+.imgdiv {
+    display: inline-block;
+    width: 23%;
+    margin: 2% 0.5%;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: 9px 9px 5px 3px rgba(0, 0, 0, 0.16);
+}
+
+.imgdiv::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(144, 124, 153, 0.6);
+    transition: 2.6s;
+}
+
+.imgdiv:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 0;
+}
+
+.f-img {
+    display: block;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.f-over {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: 1;
+}
+
+.f-over div {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.f-over h4 {
+    font-size: 30px;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.f-over p {
+    word-spacing: 5px;
+    color: white;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.f-over i {
+    margin: 10px;
+    background-color: white;
+    padding: 2px;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 1.4s;
+}
+
+.f-over a {
+    display: inline-block;
+}
+
+.f-over:hover h4 {
+    opacity: 1;
+}
+
+.f-over:hover p {
+    opacity: 1;
+}
+
+.f-over:hover i {
+    opacity: 1;
+}
+
+.offer {
+    background: url(images/13223498_5160549.jpg);
+    position: relative;
+    background-position: top;
+}
+
+.o-div {
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.offers {
+    display: inline-block;
+    margin: 1.5% 1%;
+    border: 1px solid white;
+    width: 23%;
+    height: 35%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+}
+
+.offers::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 1s;
+}
+
+.offers:hover::after {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.offers:hover i {
+    color: rgb(0, 128, 255);
+}
+
+td {
+    padding: 10px;
+}
+
+td i,
+td .fa-gears {
+    color: white;
+    margin: 0%;
+    transition: 1s;
+}
+
+td p {
+    margin: 0%;
+    text-align: justify;
+    color: rgb(99, 99, 99);
+}
+
+td h3 {
+    text-align: justify;
+}
+
+.why {
+    background: none;
+    position: relative;
+}
+
+.why::after {
+    content: "";
+    background: url(images/colorful-abstract-nebula-space-background.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.left-side {
+    float: left;
+    text-align: justify;
+    width: 35%;
+    margin: 7% 5%;
+}
+
+.left-side .line {
+    margin-left: 10px;
+}
+
+.left-side h2 {
+    font-family: 'Delius Swash Caps', cursive;
+    color: #ffffff;
+}
+
+.left-side ul,
+.left-side p {
+    margin-top: 50px;
+}
+
+.left-side p {
+    color: rgb(255, 242, 0);
+}
+
+.left-side li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.left-side li:before {
+    content: '\f058';
+    font-family: 'FontAwesome';
+    float: left;
+    color: palevioletred;
+    margin-right: 10px;
+}
+
+.right-side {
+    width: 35%;
+    margin-top: 3%;
+    display: inline-block;
+}
+
+.right-side img {
+    display: block;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 30px;
+    transition: 1s;
+}
+
+.firstdot,
+.dot:hover {
+    background-color: rgb(255, 242, 0);
+}
+
+.back {
+    background-image: url(images/beautiful-shot-home-made-vegan-icecreams-chocolate-bars-ice-cubes-metal-plate.jpg);
+    width: 100%;
+    height: 50vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+.back::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container {
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    word-spacing: 20px;
+}
+
+.box {
+    display: inline-block;
+    width: 20%;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px 0px;
+    word-spacing: normal;
+    text-transform: capitalize;
+}
+
+.box i {
+    color: #ffffff;
+    font-size: 35px;
+    margin: 0 0 30px 0;
+}
+
+.box:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.pricing {
+    background: rgb(225, 214, 255);
+    word-spacing: 70px;
+}
+
+.plan {
+    position: relative;
+    display: inline-block;
+    width: 19%;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-radius: 70px;
+    word-spacing: normal;
+    line-height: 35px;
+    padding: 50px 0px;
+    margin-top: 50px;
+    box-shadow: -10px -10px 8px 20px rgb(255, 255, 255, 0.2), 10px 10px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(225, 214, 255);
+    z-index: 1;
+}
+
+.plan::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(73, 0, 130);
+    border-radius: 70px;
+    transition: 1.5s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.plan:hover:after {
+    opacity: 1;
+    height: 100%;
+}
+
+.plan:hover>h3 {
+    color: white;
+}
+
+.plan:hover h4 {
+    color: rgb(173, 173, 173);
+}
+
+.pricing h2 {
+    word-spacing: normal;
+}
+
+.plan span {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #ffffff;
+    line-height: 30px;
+    padding: 20px 20px;
+}
+
+.plan span h3 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.plan h3 {
+    font-weight: lighter;
+}
+
+.plan span p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.plan button {
+    background: rgb(157, 110, 171);
+    color: white;
+    border-radius: 30px;
+    width: 130px;
+    margin: 20px 0px;
+}
+
+.plan button:hover {
+    border: 2px solid white;
+}
+
+.plan .line {
+    width: 200px;
+    height: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.plan h4 {
+    color: rgb(89, 89, 89);
+    font-weight: lighter;
+}
+
+.plan i {
+    font-size: 20px;
+    margin: 0;
+}
+
+.line1 {
+    background-color: yellow;
+}
+
+.line2 {
+    background-color: rgb(0, 149, 255);
+}
+
+.line3 {
+    background-color: rgb(232, 130, 164)
+}
+
+.section {
+    background: url(images/image\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.section div {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    word-spacing: 50px;
+}
+
+.section span {
+    word-spacing: normal;
+    display: inline-block;
+    width: 40%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.section img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px;
+}
+
+.section h3,
+.section h4 {
+    line-height: 20px;
+}
+
+.section h3 {
+    margin-top: 15px;
+}
+
+.section p {
+    text-align: justify;
+}
+
+.team {
+    padding-top: 120px;
+    word-spacing: 30px;
+    background: url(images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200vh;
+}
+
+.team .part1 {
+    height: 100vh;
+}
+
+.team h2 {
+    word-spacing: normal;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.team span {
+    margin-top: 35px;
+    word-spacing: normal;
+    display: inline-block;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+.team img {
+    width: 250px;
+}
+
+.team .parent {
+    position: relative;
+}
+
+.team .social {
+    z-index: 1;
+    width: 45px;
+    position: absolute;
+    right: 0;
+    background: white;
+    opacity: 0;
+    transition: 1s;
+}
+
+.team i {
+    display: block;
+    font-size: 20px;
+    margin: 0;
+    line-height: 45px;
+    color: black;
+}
+
+.team i:hover {
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.team span:hover .social {
+    opacity: 1;
+}
+
+.team span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 1s;
+    z-index: 0;
+}
+
+.team span:hover::after {
+    height: 100%;
+    opacity: 1;
+}
+
+.team span p {
+    color: rgb(68, 68, 68);
 }
