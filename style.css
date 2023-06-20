@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
 * {
     margin: 0;
@@ -25,7 +28,6 @@
 
 .nav li {
     font-family: 'Poppins', sans-serif;
-    ;
     list-style: none;
     display: inline-block;
     font-size: 22px;
@@ -34,12 +36,28 @@
     margin-right: 20px;
     margin-top: 20px;
     float: right;
+    position: relative;
+}
+
+.nav li::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    background-color: white;
+    left: 0%;
+    bottom: 0%;
+    transition: 1s;
+    opacity: 0;
+}
+
+.nav li:hover::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .nav li:hover {
     cursor: pointer;
-    font-weight: 800;
-    color: aqua;
 }
 
 .nav {
@@ -110,7 +128,8 @@ button:hover {
 .why,
 .pricing,
 .section,
-.team {
+.team,
+.footer {
     height: 100vh;
     padding-top: 100px;
     background: url(images/SL-120722-54400-13.jpg);
@@ -140,7 +159,6 @@ button:hover {
     padding: 50px;
     display: inline-block;
     width: 20%;
-    height: 60%;
     border-radius: 20px;
     background-color: white;
     text-align: center;
@@ -149,6 +167,10 @@ button:hover {
     box-shadow: 9px 9px 5px 3px rgba(0, 0, 0, 0.16);
     position: relative;
     z-index: 1;
+}
+
+.rectangle p {
+    text-align: justify;
 }
 
 .rectangle:hover i {
@@ -161,13 +183,18 @@ button:hover {
     color: rgb(239, 239, 239);
 }
 
+.rectangle:hover a {
+    color: rgb(212, 212, 212);
+    transition: 2s;
+}
+
 .rectangle::after {
     content: "";
     position: absolute;
     width: 0%;
     height: 0%;
     opacity: 0;
-    background-color: rgba(230, 135, 228, 0.7);
+    background-color: rgb(0, 0, 0, 0.5);
     top: 0%;
     left: 0%;
     transition: 2s;
@@ -229,7 +256,8 @@ a:hover {
 }
 
 .feature h2 {
-    color: rgb(131, 120, 142);
+    color: rgb(128, 104, 153);
+    font-family: 'Permanent Marker', cursive;
 }
 
 .f-div {
@@ -258,7 +286,7 @@ a:hover {
     border-radius: 50px;
     top: 0%;
     left: 0%;
-    background-color: rgba(144, 124, 153, 0.6);
+    background-color: rgba(144, 124, 153, 0.8);
     transition: 2.6s;
 }
 
@@ -314,10 +342,12 @@ a:hover {
 .f-over i {
     margin: 10px;
     background-color: white;
-    padding: 2px;
+    padding: 10px;
     opacity: 0;
     transition: 1s;
     transition-delay: 1.4s;
+    font-size: 21px;
+    border-radius: 50%;
 }
 
 .f-over a {
@@ -362,7 +392,9 @@ a:hover {
     background: rgba(255, 255, 255, 0.4);
     position: relative;
 }
-
+.offer h2{
+    font-family: 'Berkshire Swash', cursive;
+}
 .offers::after {
     content: "";
     position: absolute;
@@ -596,6 +628,8 @@ td h3 {
 
 .pricing h2 {
     word-spacing: normal;
+    font-family: 'Prata', serif;
+    color: rgb(157, 110, 171);
 }
 
 .plan span {
@@ -711,7 +745,6 @@ td h3 {
 }
 
 .team {
-    padding-top: 120px;
     word-spacing: 30px;
     background: url(images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall\ \(1\).jpg);
     background-repeat: no-repeat;
@@ -728,13 +761,17 @@ td h3 {
     font-family: 'Abril Fatface', cursive;
 }
 
-.team span {
-    margin-top: 35px;
+.team .part1 span,
+.team .part2>span {
     word-spacing: normal;
     display: inline-block;
     padding: 25px;
     background: rgba(255, 255, 255, 0.6);
     position: relative;
+}
+
+.team .part1 span {
+    margin-top: 55px;
 }
 
 .team img {
@@ -772,7 +809,8 @@ td h3 {
     opacity: 1;
 }
 
-.team span::after {
+.team .part1 span::after,
+.team .part2>span::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -784,7 +822,10 @@ td h3 {
     transition: 1s;
     z-index: 0;
 }
-
+.team .part1 span:hover p{
+    color: rgb(205, 205, 205);
+    transition: 1s;
+}
 .team span:hover::after {
     height: 100%;
     opacity: 1;
@@ -792,4 +833,98 @@ td h3 {
 
 .team span p {
     color: rgb(68, 68, 68);
+}
+
+.info {
+    display: block;
+    margin: 5px 0px;
+    word-spacing: 10px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.6);
+
+}
+
+.info p {
+    display: inline-block;
+    margin: 0;
+    word-spacing: normal;
+}
+
+.info i {
+    display: inline;
+    line-height: normal;
+}
+
+.part2 {
+    width: 100%;
+}
+
+.part2>span {
+    margin-top: 20px;
+    width: 23%;
+}
+
+.part2 img {
+    width: 100%;
+}
+
+.part2>span p {
+    margin: 10px 0px;
+}
+
+.part2>span a {
+    width: 120px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    padding: 5px;
+    border: 1px solid rgb(86, 86, 86);
+    border-radius: 15px;
+}
+
+.part2>span:hover a {
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+    border: 1px solid white;
+}
+
+.footer {
+    padding-top: 55px;
+    height: 50vh;
+    background: url(images/chocolate-ice-cream-cones-white-background.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.footer img {
+    width: 15%;
+    margin: auto;
+    border-radius: 50px;
+    display: block;
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 25px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.footer div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(47, 47, 47);
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.footer div:hover {
+    cursor: pointer;
+    background-color: black;
+    transition: 1s;
+}
+
+.footer i {
+    color: white;
+    margin: 0;
+    position: static;
+    font-size: 20px;
 }
